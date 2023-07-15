@@ -14,25 +14,26 @@ import Rectangle57 from "../../img/Rectangle 57.png";
   </div>
 
   <div
-    class="relative flex justify-between items-center w-[90%] m-auto z-10 rounded-xl overflow-hidden bg__client"
+    class="relative w-[97%] flex flex-col justify-between items-center m-auto z-10 rounded-xl overflow-hidden py-4 lg:flex-row lg:w-[90%] lg:py-0 bg__client"
   >
     <div class="px-5 py-3">
       <h2 class="text-3xl font-bold">
-        Explore product in <span class="block">new way</span>
+        Explore product in <span class="lg:block">new way</span>
       </h2>
       <p class="py-4 text-xl">
         We specialize in creating visual identities for
         <span class="block"> products and branda in your company.</span>
       </p>
-      <div class="flex gap-5 items-center py-5">
+      <div class="flex flex-col gap-5 items-center py-8 sm:flex-row">
         <div class="relative">
-          <label for="email" class="label__email">Your name</label>
           <input
             type="email"
             class="h-[35px] w-[350px] outline-none px-3 rounded-xl bg__client input__email"
             id="email"
             name="email"
+            placeholder=" "
           />
+          <label for="email" class="label__email">Email</label>
         </div>
         <div>
           <button
@@ -47,7 +48,11 @@ import Rectangle57 from "../../img/Rectangle 57.png";
 
     <div class="relative z-10">
       <picture>
-        <img src={Rectangle57} alt="" class="object-cover saturate-200" />
+        <img
+          src={Rectangle57}
+          alt=""
+          class="object-cover saturate-200 rounded-xl lg:rounded-none"
+        />
       </picture>
     </div>
   </div>
@@ -68,11 +73,11 @@ import Rectangle57 from "../../img/Rectangle 57.png";
       );
 
     if (emailInput.value !== "" && !expReg) {
-      text.innerHTML = `Porporciona una dirrección de correo correcta`;
-      text.style.color = "#AA14F0";
+      text.innerHTML = `Please provide a correct email address either`;
+      text.classList.add("email__error");
     } else {
-      text.innerHTML = "Your name";
-      text.style.color = "white";
+      text.innerHTML = "Email";
+      text.classList.remove("email__error");
     }
   }
 </script>
@@ -93,15 +98,20 @@ import Rectangle57 from "../../img/Rectangle 57.png";
   .label__email {
     position: absolute;
     transform: translateY(5px);
-    left: 0px;
-    top: -30px;
+    left: 7px;
+    top: 1px;
     transition: all 0.3s;
+    pointer-events: none;
   }
 
-  .input__email:focus ~ .label__email,
-  .input__email:not(:placeholder-shown) ~ .label__email {
+  .input__email:focus + .label__email,
+  .input__email:not(:placeholder-shown) + .label__email {
     transform: translateY(-20px);
-    left: 10px;
-    top: 0px;
+    left: 0px;
+    top: -10px;
+  }
+  .email__error {
+    color: rgb(243, 72, 72);
+    font-weight: 600;
   }
 </style>

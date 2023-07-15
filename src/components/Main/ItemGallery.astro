@@ -7,12 +7,12 @@ export interface Props {
 const { title, description , img  } = Astro.props;
 ---
 
-<li class="relative overflow-hidden rounded-lg w-[48%] h-[350px]">
+<li class="relative overflow-hidden w-full sm:w-[49%] rounded-lg lg:w-[48%] ">
   <div>
     <picture>
       <img src={img} alt={title} class="w-full object-cover img__gallery " />
     </picture>
-    <div class="absolute left-[1px] bottom-0 px-6 py-3 w-[60%] galllery-item">
+    <div class="absolute w-full left-[1px] bottom-0 px-6 py-3  galllery-item lg:w-[60%]">
       <p class="text-xl font-semibold">{title}</p>
       <p>{description}</p>
     </div>
