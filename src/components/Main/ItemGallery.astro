@@ -2,14 +2,22 @@
 export interface Props {
   title: string;
   description: string;
+  img : string;
 }
-const { title, description } = Astro.props;
+const { title, description , img  } = Astro.props;
 ---
 
-<div class="absolute left-[1px] bottom-0 px-6 py-3 w-[60%] galllery-item">
-  <p class="text-xl font-semibold">{title}</p>
-  <p>{description}</p>
-</div>
+<li class="relative overflow-hidden rounded-lg w-[48%] h-[350px]">
+  <div>
+    <picture>
+      <img src={img} alt={title} class="w-full object-cover img__gallery " />
+    </picture>
+    <div class="absolute left-[1px] bottom-0 px-6 py-3 w-[60%] galllery-item">
+      <p class="text-xl font-semibold">{title}</p>
+      <p>{description}</p>
+    </div>
+  </div>
+</li>
 
 <script>
   const imgs = document.querySelectorAll(".img__gallery");

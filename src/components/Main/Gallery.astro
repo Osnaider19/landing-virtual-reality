@@ -3,63 +3,39 @@ import Rectanquel33 from "../../img/Rectangle 33.png";
 import Rectanquel34 from "../../img/Rectangle 34.png";
 import Rectanquel35 from "../../img/Rectangle 35.png";
 import Rectanquel36 from "../../img/Rectangle 36.png";
-import ImgMessege from "./ImgMessege.astro";
+import ItemGallery from "./ItemGallery.astro";
 ---
 
 <section class="relative bg-[#010208] text-white px-12">
-  <div>
+  <div class="relative z-10">
     <h2 class="text-4xl capitalize font-bold pt-11 text-center">
       Mix reality headsets
     </h2>
   </div>
   <div class="relative z-10">
     <ul
-      class="flex justify-center items-center overflow-hidden gap-7 py-8 flex-wrap"
+      class="flex justify-between items-center overflow-hidden gap-7 py-8 flex-wrap"
     >
-      <li class="relative overflow-hidden rounded-lg">
-        <div>
-          <picture>
-            <img src={Rectanquel33} alt="" class="img__gallery" />
-          </picture>
-          <ImgMessege
-            title="Metaverso"
-            description="A network of 3D virtual world focused on social connection"
-          />
-        </div>
-      </li>
-      <li class="relative overflow-hidden rounded-lg">
-        <div>
-          <picture>
-            <img src={Rectanquel34} alt="" class="img__gallery" />
-          </picture>
-          <ImgMessege
-            title="Aiot"
-            description="Al and lot both emerging inovative tecnologies with a lot of potentials."
-          />
-        </div>
-      </li>
-      <li class="relative overflow-hidden rounded-lg">
-        <div>
-          <picture>
-            <img src={Rectanquel35} alt="" class="img__gallery" />
-          </picture>
-          <ImgMessege
-            title="HoloLens"
-            description="HoloLens display information blend with the real world, or even simulate a virtual world."
-          />
-        </div>
-      </li>
-      <li class="relative overflow-hidden rounded-lg">
-        <div>
-          <picture>
-            <img src={Rectanquel36} alt="" class="img__gallery" />
-          </picture>
-          <ImgMessege
-            title="TPCASSTT"
-            description="method is gread to start students reading and inferring with little assistance from the instructor"
-          />
-        </div>
-      </li>
+      <ItemGallery
+        img={Rectanquel33}
+        description="A network of 3D virtual world focused on social connection"
+        title="Metaveso"
+      />
+      <ItemGallery
+        img={Rectanquel34}
+        title="Aiot"
+        description="Al and lot both emerging inovative tecnologies with a lot of potentials."
+      />
+      <ItemGallery
+        img={Rectanquel35}
+        title="HoloLens"
+        description="HoloLens display information blend with the real world, or even simulate a virtual world."
+      />
+      <ItemGallery
+        img={Rectanquel36}
+        title="TPCASSTT"
+        description="method is gread to start students reading and inferring with little assistance from the instructor"
+      />
     </ul>
   </div>
   <div

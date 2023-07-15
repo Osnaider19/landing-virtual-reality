@@ -9,10 +9,10 @@ import Rectangle57 from "../../img/Rectangle 57.png";
   >
   </div>
   <div
-    class="absolute left-0 top-0 w-[100%] h-[100%] bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-[#AA14F0] via-transparent to-transparent"
+    class="absolute left-0 top-0 w-[100%] h-[100%] bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-[#AA14F050] via-transparent to-transparent"
   >
   </div>
-  
+
   <div
     class="relative flex justify-between items-center w-[90%] m-auto z-10 rounded-xl overflow-hidden bg__client"
   >
@@ -25,11 +25,13 @@ import Rectangle57 from "../../img/Rectangle 57.png";
         <span class="block"> products and branda in your company.</span>
       </p>
       <div class="flex gap-5 items-center py-5">
-        <div>
+        <div class="relative">
+          <label for="email" class="label__email">Your name</label>
           <input
             type="email"
-            class="h-[35px] w-[350px] outline-none px-3 rounded-xl placeholder:text-white bg__client"
-            placeholder="your name"
+            class="h-[35px] w-[350px] outline-none px-3 rounded-xl bg__client input__email"
+            id="email"
+            name="email"
           />
         </div>
         <div>
@@ -51,6 +53,30 @@ import Rectangle57 from "../../img/Rectangle 57.png";
   </div>
 </section>
 
+<script>
+  const emailInput = document.querySelector(".input__email");
+  const text = document.querySelector(".label__email");
+
+  emailInput.addEventListener("input", (e) => {
+    validarEmail(e.target.value);
+  });
+  function validarEmail(email = "") {
+    if (typeof email !== "string") return;
+    let expReg =
+      /[a-z0-9]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(
+        email
+      );
+
+    if (emailInput.value !== "" && !expReg) {
+      text.innerHTML = `Porporciona una dirrección de correo correcta`;
+      text.style.color = "#AA14F0";
+    } else {
+      text.innerHTML = "Your name";
+      text.style.color = "white";
+    }
+  }
+</script>
+
 <style>
   .bg__client {
     background: rgba(255, 255, 255, 0.1);
@@ -63,5 +89,19 @@ import Rectangle57 from "../../img/Rectangle 57.png";
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     border: 1px solid rgba(255, 255, 255, 0);
+  }
+  .label__email {
+    position: absolute;
+    transform: translateY(5px);
+    left: 0px;
+    top: -30px;
+    transition: all 0.3s;
+  }
+
+  .input__email:focus ~ .label__email,
+  .input__email:not(:placeholder-shown) ~ .label__email {
+    transform: translateY(-20px);
+    left: 10px;
+    top: 0px;
   }
 </style>

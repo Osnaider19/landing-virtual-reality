@@ -6,9 +6,13 @@ import Ellipse20 from "../../img/Ellipse 20.png";
 import vector from "../../img/vector.png";
 ---
 
-<div class="relative flex text-white h-[90vh]">
-  <dir class="pt-9 w-[50%]">
-    <div class="text-6xl capitalize font-bold flex flex-col">
+<div class="relative flex text-white">
+  <dir class="relative w-[50%] h-[110vh]">
+    <div
+      class="absolute left-0 top-44 w-full h-[70%] bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-[#AA14F050] via-transparent to-transparent"
+    >
+    </div>
+    <div class="text-6xl capitalize font-bold flex flex-col pt-14">
       <span>Les't explore</span>
       <span>three-dimension</span>
       <span>visual</span>
@@ -33,19 +37,27 @@ import vector from "../../img/vector.png";
     </div>
     <Peoples />
   </dir>
-  <div class="relative w-[50%] px-14">
+  <div class="relative w-[50%] flex justify-center items-center h-[110vh]">
+    <div
+      class="absolute left-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-[#AA14F050] via-transparent to-transparent"
+    >
+    </div>
     <div class="relative flex justify-center items-center">
-      <div class="absolute mt-8 left-0 top-0 w-[490px] h-[85vh]">
-        <div class="absolute h-[420px] w-[440px]">
-          <img src={Ellipse} alt="" class="absolute w-full z-20" />
+      <div class="relative h-full left-0 -top-12 w-[490px]">
+        <div class="absolute h-[440px] w-[440px]">
+          <img
+            src={Ellipse}
+            alt=""
+            class="absolute w-full z-20 pointer-events-none select-none"
+          />
           <img
             src={Ellipse18}
             alt=""
-            class="absolute left-2 top-[70px] rotate-3 w-[425px] h-[230px] z-10"
+            class="absolute left-2 top-[70px] rotate-3 w-[425px] h-[230px] z-10 pointer-events-none select-none"
           />
         </div>
         <div class="relative w-full -top-9">
-          <img src={Ellipse20} alt="" class="relative z-30 w-[700px] h-full" />
+          <img src={Ellipse20} alt="" class="relative z-30 w-[700px] h-full pointer-events-none select-none" />
           <div class="absolute right-0 top-6">
             <img src={vector} alt="" />
           </div>
