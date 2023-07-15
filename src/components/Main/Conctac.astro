@@ -1,0 +1,67 @@
+---
+import IconArrow from "../svg/IconArrow.astro";
+import Rectangle57 from "../../img/Rectangle 57.png";
+---
+
+<section class="relative w-full py-24 bg-[#010208] text-white">
+  <div
+    class="absolute left-0 top-0 w-[100%] h-[100%] bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-[#AA14F050] via-transparent to-transparent"
+  >
+  </div>
+  <div
+    class="absolute left-0 top-0 w-[100%] h-[100%] bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-[#AA14F0] via-transparent to-transparent"
+  >
+  </div>
+  
+  <div
+    class="relative flex justify-between items-center w-[90%] m-auto z-10 rounded-xl overflow-hidden bg__client"
+  >
+    <div class="px-5 py-3">
+      <h2 class="text-3xl font-bold">
+        Explore product in <span class="block">new way</span>
+      </h2>
+      <p class="py-4 text-xl">
+        We specialize in creating visual identities for
+        <span class="block"> products and branda in your company.</span>
+      </p>
+      <div class="flex gap-5 items-center py-5">
+        <div>
+          <input
+            type="email"
+            class="h-[35px] w-[350px] outline-none px-3 rounded-xl placeholder:text-white bg__client"
+            placeholder="your name"
+          />
+        </div>
+        <div>
+          <button
+            class="bg-gradient-to-l from-[#C54B8C] to-[#BC3CD8] px-8 py-2 font-bold rounded-md transition-colors duration-150 hover:opacity-80 flex gap-4 items-center"
+          >
+            <i>Start</i>
+            <IconArrow />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative z-10">
+      <picture>
+        <img src={Rectangle57} alt="" class="object-cover saturate-200" />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<style>
+  .bg__client {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .bg-coment {
+    background: rgba(255, 255, 255, 0);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
+</style>

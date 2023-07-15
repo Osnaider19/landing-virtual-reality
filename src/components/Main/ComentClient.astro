@@ -1,0 +1,62 @@
+---
+import perfil1 from "../../img/perfil1.png";
+import perfil2 from "../../img/perfil2.png";
+import perfil3 from "../../img/perfil3.png";
+import Coment from "./coment.astro";
+---
+
+<section class="relative w-full h-screen bg-[#010208] text-white flex flex-col justify-center items-center">
+  <div
+    class="absolute left-0 bottom-0 w-[100%] h-[100%] bg-gradient-to-t from-transparent via-transparent to-[#AA14F050]"
+  >
+  </div>
+  <div
+    class="relative flex flex-col justify-center items-center z-10 w-[90%] m-auto rounded-lg pb-20 bg__client"
+  >
+    <h2 class="text-center text-5xl py-5 font-bold">What our clients say</h2>
+    <div class="w-[50%] text-center py-2 text-xl">
+      <p>
+        See what our customer say about us. It really matter for us. How good or
+        bad we will make ir for evaluation to make EhyalLive better.
+      </p>
+    </div>
+
+    <div class="w-full px-5">
+      <ul class="pt-9 flex gap-7 flex-wrap justify-center items-center">
+        <Coment
+          description="I know in real-time where the money is spent , and I dont have to lend out the company's credit card anymero. What a relief "
+          img={perfil1}
+          usuario="Denny Hilguston"
+          idusuario="@denny.hill"
+        />
+        <Coment
+          description="VISUALS are much better. The improvements in optics and resolution and much more than a modern console generation leap. "
+          img={perfil3}
+          usuario="Vani Pandey"
+          idusuario="@vani.pandey"
+        />
+        <Coment
+          description="I can actually see the improvement in the graphics, not having the external sensors is a big plus.  and I dont have to lend out the company's credit card anymero. "
+          img={perfil2}
+          usuario="milly Singh"
+          idusuario="@milly.singh"
+        />
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .bg__client {
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .bg-coment {
+    background: rgba(255, 255, 255, 0);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
+</style>

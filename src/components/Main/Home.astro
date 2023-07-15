@@ -1,9 +1,13 @@
 ---
 import Peoples from "./Peoples.astro";
+import Ellipse from "../../img/Ellipse 19.png";
+import Ellipse18 from "../../img/Ellipse 18.png";
+import Ellipse20 from "../../img/Ellipse 20.png";
+import vector from "../../img/vector.png";
 ---
 
-<div class="relative flex text-white">
-  <dir class="py-9 w-[50%]">
+<div class="relative flex text-white h-[90vh]">
+  <dir class="pt-9 w-[50%]">
     <div class="text-6xl capitalize font-bold flex flex-col">
       <span>Les't explore</span>
       <span>three-dimension</span>
@@ -29,5 +33,54 @@ import Peoples from "./Peoples.astro";
     </div>
     <Peoples />
   </dir>
-  <div class="w-[50%]"></div>
+  <div class="relative w-[50%] px-14">
+    <div class="relative flex justify-center items-center">
+      <div class="absolute mt-8 left-0 top-0 w-[490px] h-[85vh]">
+        <div class="absolute h-[420px] w-[440px]">
+          <img src={Ellipse} alt="" class="absolute w-full z-20" />
+          <img
+            src={Ellipse18}
+            alt=""
+            class="absolute left-2 top-[70px] rotate-3 w-[425px] h-[230px] z-10"
+          />
+        </div>
+        <div class="relative w-full -top-9">
+          <img src={Ellipse20} alt="" class="relative z-30 w-[700px] h-full" />
+          <div class="absolute right-0 top-6">
+            <img src={vector} alt="" />
+          </div>
+        </div>
+        <div
+          class="absolute left-3 z-0 top-[120px] h-[420px] w-[415px] bg-[#534686] content__text__cine"
+        >
+          <div class="relative flex flex-col justify-center items-center pt-48">
+            <h2 class="relative text-center text-2xl font-semibold capitalize">
+              Cinematic virtual reality
+            </h2>
+            <div class="bg-white h-[2px] w-[50%] mt-7"></div>
+            <div class="w-[75%] mt-5">
+              <p class="text-center">
+                Les't be the best for more real and effective results and ready
+                to explore the limitless world that we have prepared for you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<style>
+  .content__text__cine {
+    -webkit-border-top-right-radius: 50px;
+    -webkit-border-bottom-right-radius: 400px;
+    -webkit-border-bottom-left-radius: 400px;
+    -moz-border-radius-topright: 50px;
+    -moz-border-radius-bottomright: 400px;
+    -moz-border-radius-bottomleft: 400px;
+    border-top-right-radius: 240px;
+    border-bottom-right-radius: 400px;
+    border-bottom-left-radius: 400px;
+  }
+</style>
